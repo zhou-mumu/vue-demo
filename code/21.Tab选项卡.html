@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab ul {
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+        .tab ul li {
+            border-style: border-box;
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: cneter;
+            float: left;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+            cursor: pointer;
+        }
+        .tab ul li:first-child {
+            border-left: 1px solid #000;
+        }
+        .tab ul li.active {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="tab">
+            <ul>
+                <li class="active">背景1</li>
+                <li>背景2</li>
+                <li>背景3</li>
+            </ul>
+        </div>
+        <div class="current">
+            <img src="images/134RLW9-2.jpg">
+        </div>
+        <div>
+            <img src="images/150415101248-1-lp.jpg">
+        </div>
+        <div>
+            <img src="images/thumb-1920-842664.jpg">
+        </div>
+    </div>
+</body>
+</html>

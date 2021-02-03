@@ -16,7 +16,7 @@
             width: 100px;
             height: 50px;
             line-height: 50px;
-            text-align: cneter;
+            text-align: center;
             float: left;
             border-top: 1px solid #000;
             border-right: 1px solid #000;
@@ -28,26 +28,53 @@
         .tab ul li.active {
             background-color: blue;
         }
+        .app div {
+            display: none;
+        }
+        .app .tab {
+            display: block;
+        }
+        .app .current {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="app">
         <div class="tab">
             <ul>
-                <li class="active">背景1</li>
-                <li>背景2</li>
-                <li>背景3</li>
+                <li :class='currentIndex==index? "active":""' :key='item.id' v-for='(item,index) in list'>{{item.title}}</li>
             </ul>
         </div>
-        <div class="current">
-            <img src="images/134RLW9-2.jpg">
-        </div>
-        <div>
-            <img src="images/150415101248-1-lp.jpg">
-        </div>
-        <div>
-            <img src="images/thumb-1920-842664.jpg">
+        <div :class='currentIndex==index?"current":""' :key='item.id' v-for='(item,index) in list'>
+            <img :src="item.path">
         </div>
     </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '.app',
+            data: {
+               currentIndex: 0, //当前选项卡的索引
+               list: [{
+                   id: 1,
+                   title: '背景1',
+                   path: 'images/134RLW9-2.jpg'
+               },{
+                   id: 2,
+                   title: '背景2',
+                   path: 'images/150415101248-1-lp.jpg'
+               },{
+                   id: 3,
+                   title: '背景3',
+                   path: 'images/thumb-1920-842664.jpg'
+               }]
+            },
+            methods: {
+
+            }
+        });
+    </script>
+    
 </body>
 </html>

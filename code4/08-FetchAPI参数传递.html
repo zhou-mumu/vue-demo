@@ -55,28 +55,11 @@
     //   });
 
     // POST请求传参
-    // fetch('http://localhost:3000/books', {
-    //   method: 'post',
-    //   body: JSON.stringify({
-    //     uname: '张三',
-    //     pwd: '456'
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   }
-    // })
-    //   .then(function(data){
-    //     return data.text();
-    //   }).then(function(data){
-    //     console.log(data)
-    //   });
-
-    // PUT请求传参
-    fetch('http://localhost:3000/books/123', {
-      method: 'put',
+    fetch('http://localhost:3000/books', {
+      method: 'post',
       body: JSON.stringify({
         uname: '张三',
-        pwd: '789'
+        pwd: '456'
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -87,6 +70,23 @@
       }).then(function(data){
         console.log(data)
       });
+
+    // PUT请求传参
+    // fetch('http://localhost:3000/books/123', {
+    //   method: 'put',
+    //   body: JSON.stringify({
+    //     uname: '张三',
+    //     pwd: '789'
+    //   }),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
+    //   .then(function(data){
+    //     return data.text();
+    //   }).then(function(data){
+    //     console.log(data)
+    //   });
   </script>
 </body>
 </html>

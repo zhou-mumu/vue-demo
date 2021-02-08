@@ -59,6 +59,7 @@
       图书管理-添加图书
     */
     axios.defaults.baseURL = 'http://localhost:3000/';
+    // 响应拦截器
     axios.interceptors.response.use(function(res){
       return res.data;
     }, function(error){
@@ -178,7 +179,7 @@
           //   return item.name == val;
           // });
           var ret = await axios.get('/books/book/' + this.name);
-          if(ret.status == 1) {
+          if(ret.status  == 1) {
             // 图书名称存在
             this.submitFlag = true;
           }else{

@@ -158,11 +158,10 @@
             this.queryData();
           }
         },
+        // 调用后台接口获取图书列表数据
         queryData: async function(){
-          // 调用后台接口获取图书列表数据
           // var ret = await axios.get('books');
           // this.books = ret.data;
-
           this.books = await axios.get('books');
         }
       },
@@ -190,16 +189,15 @@
       },
       mounted: function(){
         // var that = this;
-        // axios.get('books').then(function(data){
-        //   console.log(data.data)
-        //   that.books = data.data;
+        // axios.get('books').then(function(data) {
+        //   console.log(data);
+        //   that.books = data;
         // })
-
+        // 另一种箭头函数方式写法
         // axios.get('books').then((data)=>{
-        //   console.log(data.data)
-        //   this.books = data.data;
+        //   console.log(data);
+        //   this.books = data;
         // })
-
         this.queryData();
       }
     });
